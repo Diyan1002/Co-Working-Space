@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import img1 from "../assets/1.png"; 
+import img1 from "../assets/1.png";
 import img2 from "../assets/2.png";
 import img3 from "../assets/3.png";
 import img4 from "../assets/4.png";
@@ -27,43 +27,43 @@ export default function Gallery() {
   };
 
   return (
-    <div className="w-full bg-white flex flex-col md:flex-row items-center justify-center gap-8 py-10">
+    <div className="w-full bg-white flex flex-col md:flex-row items-center justify-center gap-8 py-10 px-4 sm:px-6">
       {/* Images Section */}
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col md:flex-row items-center gap-4">
         {/* Left Image (Grayscale) */}
         <img
           src={images[(currentIndex + images.length - 1) % images.length]}
           alt="preview"
-          className="w-48 h-72 object-cover grayscale rounded-lg"
+          className="w-32 h-48 sm:w-40 sm:h-60 md:w-48 md:h-72 object-cover grayscale rounded-lg"
         />
 
         {/* Main Image */}
         <img
           src={images[currentIndex]}
           alt="main"
-          className="w-72 h-96 object-cover rounded-lg shadow-lg"
+          className="w-48 h-64 sm:w-60 sm:h-80 md:w-72 md:h-96 object-cover rounded-lg shadow-lg"
         />
 
         {/* Two Small Images */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-row md:flex-col gap-4">
           <img
             src={images[(currentIndex + 1) % images.length]}
             alt="side1"
-            className="w-48 h-32 object-cover rounded-lg"
+            className="w-32 h-24 sm:w-40 sm:h-28 md:w-48 md:h-32 object-cover rounded-lg"
           />
           <img
             src={images[(currentIndex + 2) % images.length]}
             alt="side2"
-            className="w-48 h-32 object-cover rounded-lg"
+            className="w-32 h-24 sm:w-40 sm:h-28 md:w-48 md:h-32 object-cover rounded-lg"
           />
         </div>
       </div>
 
       {/* Text + Arrows */}
-      <div className="text-center md:text-left">
+      <div className="text-center md:text-left mt-6 md:mt-0">
         <p className="text-gray-500 text-sm mb-1">Frispes gallery</p>
-        <h2 className="text-2xl font-bold text-[#1e3a8a] mb-4 leading-snug">
-          Immersive beautiful <br />
+        <h2 className="text-xl sm:text-2xl font-bold text-[#1e3a8a] mb-4 leading-snug">
+          Immersive beautiful <br className="hidden sm:block" />
           co-working space gallery
         </h2>
 
@@ -76,7 +76,7 @@ export default function Gallery() {
             <img
               src={leftArrow}
               alt="Previous"
-              className="w-6 h-6 md:w-14 md:h-4"
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-14 md:h-4"
             />
           </button>
           <button
@@ -86,7 +86,7 @@ export default function Gallery() {
             <img
               src={rightArrow}
               alt="Next"
-              className="w-6 h-6 md:w-16 md:h-6"
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-16 md:h-6"
             />
           </button>
         </div>
