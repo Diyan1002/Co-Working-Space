@@ -4,7 +4,7 @@ import officeImg from "../assets/Office.png"; // make sure filename matches
 const Intro = () => {
   return (
     <section className="w-full bg-white relative">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mt-16 mx-auto px-6 py-12">
         {/* Top Text Area (2 columns) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {/* Left: Heading */}
@@ -24,9 +24,9 @@ const Intro = () => {
           {/* Right: Paragraph */}
           <div className="text-[#6A6A6A] font-Lato mt-6 md:mt-8 text-sm sm:text-base leading-relaxed">
             <p>
-              In Frispes, we spearhead new initiatives and provide mentorship to
-              a new startup, and help grow their opportunities in key local,{" "}
-              <br className="hidden sm:block" /> regional and global markets
+              At Frispes, we don’t just provide workspaces, we create an<br /> ecosystem
+               where creativity thrives, connections flourish,<br /> and every individual 
+               is empowered to achieve<br /> their highest potential. 
             </p>
           </div>
         </div>
