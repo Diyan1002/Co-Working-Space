@@ -4,7 +4,7 @@ import tokopediaLogo from "../assets/tokopedia.png";
 import upworkLogo from "../assets/upwork.png";
 import microsoftLogo from "../assets/microsoft.png";
 import shopifyLogo from "../assets/shopify.png";
-import stripeLogo from "../assets/stripe.png";
+import stripeLogo from "../assets/Stripe.png";
 
 const Clients = () => {
   const logos = [
