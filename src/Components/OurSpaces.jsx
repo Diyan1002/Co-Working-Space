@@ -43,7 +43,7 @@ const OurSpaces = () => {
   };
 
   return (
-    <section className="w-full mt-60 bg-white py-12 sm:py-16">
+    <section className="w-full mt-80 bg-white py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading + Paragraph + Arrows */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
