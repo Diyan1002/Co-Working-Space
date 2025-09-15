@@ -47,7 +47,7 @@ const Intro = () => {
       <div
         className="
           absolute 
-          left-1/2 -translate-x-1/2 bottom-[-40%] 
+          left-1/2 -translate-x-1/2 bottom-[-10%] 
           w-[90%] sm:w-[70%] 
           md:left-32 md:translate-x-0 md:bottom-6 md:w-[30%] md:max-w-sm
           bg-[#10375C] text-white 

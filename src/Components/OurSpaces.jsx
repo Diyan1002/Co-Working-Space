@@ -43,16 +43,17 @@ const OurSpaces = () => {
   };
 
   return (
-    <section className="w-full mt-80 bg-white py-12 sm:py-16">
+    <section className="w-full bg-white py-16 md:py-12 mt-[60px] md:mt-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading + Paragraph + Arrows */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="flex flex-col md:flex-row md:items-center md:gap-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#10375C] whitespace-nowrap">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#10375C] whitespace-nowrap text-center md:text-left">
               Our Spaces
             </h2>
-            <p className="mt-2 md:mt-0 md:ml-8 text-gray-500 max-w-lg text-sm sm:text-base md:text-lg">
-              Our space is designed to give you a different experience <br className="hidden sm:block"/>
+            <p className="mt-3 md:mt-0 md:ml-8 text-gray-500 max-w-lg text-sm sm:text-base md:text-lg text-center md:text-left">
+              Our space is designed to give you a different experience{" "}
+              <br className="hidden sm:block" />
               when working with your team or personally
             </p>
           </div>
@@ -63,23 +64,31 @@ const OurSpaces = () => {
               onClick={handlePrev}
               className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100 transition"
             >
-              <img src={leftArrow} alt="Previous" className="w-5 h-5 sm:w-6 sm:h-6" />
+              <img
+                src={leftArrow}
+                alt="Previous"
+                className="w-5 h-5 sm:w-6 sm:h-6"
+              />
             </button>
             <button
               onClick={handleNext}
               className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100 transition"
             >
-              <img src={rightArrow} alt="Next" className="w-5 h-5 sm:w-6 sm:h-6" />
+              <img
+                src={rightArrow}
+                alt="Next"
+                className="w-5 h-5 sm:w-6 sm:h-6"
+              />
             </button>
           </div>
         </div>
 
         {/* Carousel */}
-        <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+        <div className="mt-12 md:mt-10 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className={`relative w-[80%] sm:w-[300px] h-[300px] sm:h-[350px] shadow-lg transition-all duration-300 rounded-lg overflow-hidden ${
+              className={`relative w-[85%] sm:w-[300px] h-[280px] sm:h-[350px] shadow-lg transition-all duration-300 rounded-lg overflow-hidden ${
                 slide.highlight
                   ? "bg-[#10375C] text-white scale-105"
                   : "bg-white text-black"
@@ -97,7 +106,7 @@ const OurSpaces = () => {
               {/* Highlighted middle card */}
               {slide.highlight && (
                 <div className="relative p-6 flex flex-col justify-center items-center h-full text-center">
-                  {/* Decorative lines image at top right */}
+                  {/* Decorative lines image */}
                   <img
                     src={linesImg}
                     alt="lines decoration"
@@ -105,7 +114,9 @@ const OurSpaces = () => {
                   />
 
                   <div>
-                    <h3 className="text-lg sm:text-xl font-semibold">{slide.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold">
+                      {slide.title}
+                    </h3>
                     <p className="mt-3 text-xs sm:text-sm text-gray-200 leading-relaxed">
                       {slide.description}
                     </p>
